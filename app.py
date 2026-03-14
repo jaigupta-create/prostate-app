@@ -159,8 +159,6 @@ with st.sidebar:
     st.divider()
     st.markdown("**About**")
     st.markdown("This app uses a Machine Learning model trained on prostate cancer diagnostic data to predict tumor type.")
-    st.divider()
-    st.markdown('<p style="font-size:0.75rem;">For educational use only.</p>', unsafe_allow_html=True)
 
 # ═══════════════════════════════════════════
 # PAGE 1 — PREDICT
@@ -214,9 +212,6 @@ if page == "🔍 Predict":
         st.progress(float(probability))
         st.caption("Bar represents malignancy probability (0% → 100%)")
         st.markdown('</div>', unsafe_allow_html=True)
-
-    st.markdown('<div class="footer">⚠️ This tool is for educational purposes only and is not a substitute for professional medical advice.</div>',
-                unsafe_allow_html=True)
 
 # ═══════════════════════════════════════════
 # PAGE 2 — MODEL ANALYTICS
