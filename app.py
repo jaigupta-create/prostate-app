@@ -26,9 +26,13 @@ st.markdown("""
     /* Background */
     .stApp { background-color: #f0f4f8; }
 
-    /* Title */
-    h1 { color: #1a3c5e; font-family: 'Segoe UI', sans-serif; }
-    h2, h3 { color: #1a3c5e; }
+    /* Force all text to be dark */
+    .stApp, .stApp p, .stApp span, .stApp label,
+    .stApp div, .stApp input { color: #1a1a1a !important; }
+
+    /* Title & Headings */
+    h1 { color: #1a3c5e !important; font-family: 'Segoe UI', sans-serif; }
+    h2, h3 { color: #1a3c5e !important; }
 
     /* Sidebar */
     [data-testid="stSidebar"] {
@@ -41,7 +45,7 @@ st.markdown("""
     /* Predict button */
     div.stButton > button {
         background-color: #1a3c5e;
-        color: white;
+        color: white !important;
         border-radius: 10px;
         padding: 0.6em 2em;
         font-size: 1rem;
@@ -51,7 +55,7 @@ st.markdown("""
     }
     div.stButton > button:hover {
         background-color: #2e6da4;
-        color: white;
+        color: white !important;
     }
 
     /* Cards */
@@ -61,15 +65,23 @@ st.markdown("""
         padding: 24px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         margin-bottom: 20px;
+        color: #1a1a1a !important;
     }
 
-    /* Result box */
+    /* Number inputs */
+    [data-testid="stNumberInput"] input {
+        background-color: white !important;
+        color: #1a1a1a !important;
+    }
+
+    /* Result boxes */
     .result-malignant {
         background-color: #fff0f0;
         border-left: 5px solid #e53e3e;
         border-radius: 8px;
         padding: 16px;
         font-size: 1.1rem;
+        color: #1a1a1a !important;
     }
     .result-benign {
         background-color: #f0fff4;
@@ -77,14 +89,22 @@ st.markdown("""
         border-radius: 8px;
         padding: 16px;
         font-size: 1.1rem;
+        color: #1a1a1a !important;
     }
 
     /* Metric cards */
     [data-testid="stMetric"] {
-        background-color: white;
+        background-color: white !important;
         border-radius: 10px;
         padding: 12px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+        color: #1a1a1a !important;
+    }
+    [data-testid="stMetricValue"] {
+        color: #1a3c5e !important;
+    }
+    [data-testid="stMetricLabel"] {
+        color: #555 !important;
     }
 
     /* Divider */
@@ -93,7 +113,7 @@ st.markdown("""
     /* Footer */
     .footer {
         text-align: center;
-        color: #888;
+        color: #888 !important;
         font-size: 0.8rem;
         margin-top: 40px;
     }
